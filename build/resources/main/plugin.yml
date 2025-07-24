@@ -1,0 +1,12 @@
+name: OfirMobs
+version: '1.0-SNAPSHOT'
+main: me.ofir.ofirMobs.OfirMobs
+api-version: '1.21'
+commands:
+  spawnzombieknight:
+    description: Spawns a zombie knight at the player location
+    usage: /spawnzombieknight
+  spawnigneel:
+    description: Spawn Igneel Fire Dragon
+  spawnskeletonlord:
+    description: Spawn Skeleton Archer Lord
