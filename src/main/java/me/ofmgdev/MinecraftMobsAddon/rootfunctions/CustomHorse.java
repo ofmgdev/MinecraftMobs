@@ -1,4 +1,4 @@
-package me.ofir.ofirMobs.rootfunctions;
+package me.ofmgdev.MinecraftMobsAddon.rootfunctions;
 
 import org.bukkit.Location;
 import org.bukkit.Material;

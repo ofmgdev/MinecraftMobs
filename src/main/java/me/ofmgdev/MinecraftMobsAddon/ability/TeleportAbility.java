@@ -1,4 +1,4 @@
-package me.ofir.ofirMobs.ability;
+package me.ofmgdev.MinecraftMobsAddon.ability;
 
 import org.bukkit.Location;
 import org.bukkit.Particle;

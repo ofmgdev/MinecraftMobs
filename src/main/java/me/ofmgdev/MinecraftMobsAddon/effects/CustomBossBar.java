@@ -1,4 +1,4 @@
-package me.ofir.ofirMobs.effects;
+package me.ofmgdev.MinecraftMobsAddon.effects;
 
 import org.bukkit.Bukkit;
 import org.bukkit.boss.BarColor;

@@ -1,10 +1,10 @@
-package me.ofir.ofirMobs.ability;
+package me.ofmgdev.MinecraftMobsAddon.ability;
 
-import me.ofir.ofirMobs.auxiliaryfunctions.GuardLeash;
-import me.ofir.ofirMobs.auxiliaryfunctions.MountedMob;
-import me.ofir.ofirMobs.rootfunctions.CustomArmor;
-import me.ofir.ofirMobs.rootfunctions.CustomHorse;
-import me.ofir.ofirMobs.rootfunctions.CustomMob;
+import me.ofmgdev.MinecraftMobsAddon.auxiliaryfunctions.GuardLeash;
+import me.ofmgdev.MinecraftMobsAddon.auxiliaryfunctions.MountedMob;
+import me.ofmgdev.MinecraftMobsAddon.rootfunctions.CustomArmor;
+import me.ofmgdev.MinecraftMobsAddon.rootfunctions.CustomHorse;
+import me.ofmgdev.MinecraftMobsAddon.rootfunctions.CustomMob;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Location;

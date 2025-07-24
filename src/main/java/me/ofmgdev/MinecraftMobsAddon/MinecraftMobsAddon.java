@@ -1,15 +1,15 @@
-package me.ofir.ofirMobs;
+package me.ofmgdev.MinecraftMobsAddon;
 
-import me.ofir.ofirMobs.command.RedDragonIgneelSpawner;
-import me.ofir.ofirMobs.command.SkeletonArcherLordSpawner;
-import me.ofir.ofirMobs.command.ZombieKnightSpawner;
+import me.ofmgdev.MinecraftMobsAddon.command.RedDragonIgneelSpawner;
+import me.ofmgdev.MinecraftMobsAddon.command.SkeletonArcherLordSpawner;
+import me.ofmgdev.MinecraftMobsAddon.command.ZombieKnightSpawner;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
 
-public final class OfirMobs extends JavaPlugin {
+public final class MinecraftMobsAddon extends JavaPlugin {
 
-    private static OfirMobs instance;
+    private static MinecraftMobsAddon instance;
 
     @Override
     public void onEnable() {
@@ -21,8 +21,7 @@ public final class OfirMobs extends JavaPlugin {
         Objects.requireNonNull(this.getCommand("spawnskeletonlord")).setExecutor(new SkeletonArcherLordSpawner(this));
     }
 
-    public static OfirMobs getInstance() {
+    public static MinecraftMobsAddon getInstance() {
         return instance;
     }
 }
-

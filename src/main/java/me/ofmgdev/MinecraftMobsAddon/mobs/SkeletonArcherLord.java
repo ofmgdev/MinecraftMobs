@@ -1,12 +1,13 @@
-package me.ofir.ofirMobs.mobs;
+package me.ofmgdev.MinecraftMobsAddon.mobs;
 
-import me.ofir.ofirMobs.rootfunctions.CustomArmor;
-import me.ofir.ofirMobs.rootfunctions.CustomHorse;
-import me.ofir.ofirMobs.rootfunctions.CustomMob;
-import me.ofir.ofirMobs.ability.HelperSpawning;
-import me.ofir.ofirMobs.ability.RapidArrowAbility;
-import me.ofir.ofirMobs.ability.TeleportAbility;
-import me.ofir.ofirMobs.effects.*;
+import me.ofmgdev.MinecraftMobsAddon.effects.CustomBossBar;
+import me.ofmgdev.MinecraftMobsAddon.effects.CustomParticles;
+import me.ofmgdev.MinecraftMobsAddon.rootfunctions.CustomArmor;
+import me.ofmgdev.MinecraftMobsAddon.rootfunctions.CustomHorse;
+import me.ofmgdev.MinecraftMobsAddon.rootfunctions.CustomMob;
+import me.ofmgdev.MinecraftMobsAddon.ability.HelperSpawning;
+import me.ofmgdev.MinecraftMobsAddon.ability.RapidArrowAbility;
+import me.ofmgdev.MinecraftMobsAddon.ability.TeleportAbility;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Location;

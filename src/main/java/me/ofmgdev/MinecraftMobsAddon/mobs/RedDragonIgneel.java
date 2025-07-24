@@ -1,8 +1,8 @@
-package me.ofir.ofirMobs.mobs;
+package me.ofmgdev.MinecraftMobsAddon.mobs;
 
-import me.ofir.ofirMobs.CustomMob;
-import me.ofir.ofirMobs.effects.CustomBossBar;
-import me.ofir.ofirMobs.effects.CustomParticles;
+import me.ofmgdev.MinecraftMobsAddon.effects.CustomBossBar;
+import me.ofmgdev.MinecraftMobsAddon.effects.CustomParticles;
+import me.ofmgdev.MinecraftMobsAddon.rootfunctions.CustomMob;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Location;

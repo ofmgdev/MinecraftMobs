@@ -1,6 +1,6 @@
-name: OfirMobs
-version: '1.0-SNAPSHOT'
-main: me.ofir.ofirMobs.OfirMobs
+name: MinecraftMobsAddon
+version: '1.0'
+main: me.ofmgdev.MinecraftMobsAddon.MinecraftMobsAddon
 api-version: '1.21'
 commands:
   spawnzombieknight:

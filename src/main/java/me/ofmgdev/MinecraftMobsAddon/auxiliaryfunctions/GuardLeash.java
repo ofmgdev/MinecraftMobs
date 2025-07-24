@@ -1,4 +1,4 @@
-package me.ofir.ofirMobs.auxiliaryfunctions;
+package me.ofmgdev.MinecraftMobsAddon.auxiliaryfunctions;
 
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.plugin.java.JavaPlugin;

@@ -1,7 +1,7 @@
-package me.ofir.ofirMobs.auxiliaryfunctions;
+package me.ofmgdev.MinecraftMobsAddon.auxiliaryfunctions;
 
-import me.ofir.ofirMobs.rootfunctions.CustomHorse;
-import me.ofir.ofirMobs.rootfunctions.CustomMob;
+import me.ofmgdev.MinecraftMobsAddon.rootfunctions.CustomHorse;
+import me.ofmgdev.MinecraftMobsAddon.rootfunctions.CustomMob;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.entity.AbstractHorse;
@@ -23,7 +23,7 @@ public class MountedMob {
         this.horseConfig = horseConfig;
         this.riderConfig = riderConfig;
     }
-    
+
     public LivingEntity spawn(Location loc) {
         // טוען את הצ'אנק לפי המיקום
         loadChunk(loc);

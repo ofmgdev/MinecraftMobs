@@ -1,4 +1,4 @@
-package me.ofir.ofirMobs.effects;
+package me.ofmgdev.MinecraftMobsAddon.effects;
 
 import org.bukkit.Location;
 import org.bukkit.Particle;

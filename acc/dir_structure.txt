@@ -1,0 +1,199 @@
+Folder PATH listing for volume OS
+Volume serial number is C634-7D35
+C:.
+¦   build.gradle
+¦   gradle.properties
+¦   gradlew
+¦   gradlew.bat
+¦   LICENSE
+¦   README.md
+¦   settings.gradle
+¦   
++---.gradle
+¦   ¦   file-system.probe
+¦   ¦   
+¦   +---8.8
+¦   ¦   ¦   gc.properties
+¦   ¦   ¦   
+¦   ¦   +---checksums
+¦   ¦   ¦       checksums.lock
+¦   ¦   ¦       md5-checksums.bin
+¦   ¦   ¦       sha1-checksums.bin
+¦   ¦   ¦       
+¦   ¦   +---dependencies-accessors
+¦   ¦   ¦       gc.properties
+¦   ¦   ¦       
+¦   ¦   +---executionHistory
+¦   ¦   ¦       executionHistory.bin
+¦   ¦   ¦       executionHistory.lock
+¦   ¦   ¦       
+¦   ¦   +---expanded
+¦   ¦   +---fileChanges
+¦   ¦   ¦       last-build.bin
+¦   ¦   ¦       
+¦   ¦   +---fileHashes
+¦   ¦   ¦       fileHashes.bin
+¦   ¦   ¦       fileHashes.lock
+¦   ¦   ¦       resourceHashesCache.bin
+¦   ¦   ¦       
+¦   ¦   +---vcsMetadata
+¦   +---buildOutputCleanup
+¦   ¦       buildOutputCleanup.lock
+¦   ¦       cache.properties
+¦   ¦       outputFiles.bin
+¦   ¦       
+¦   +---vcs-1
+¦           gc.properties
+¦           
++---.idea
+¦   ¦   .gitignore
+¦   ¦   .name
+¦   ¦   compiler.xml
+¦   ¦   gradle.xml
+¦   ¦   MinecraftMobsGithub.iml
+¦   ¦   misc.xml
+¦   ¦   modules.xml
+¦   ¦   vcs.xml
+¦   ¦   workspace.xml
+¦   ¦   
+¦   +---dictionaries
+¦   ¦       project.xml
+¦   ¦       
+¦   +---modules
+¦           MinecraftMobsAddon.main.iml
+¦           
++---acc
+¦       dir_structure.txt
+¦       
++---build
+¦   +---classes
+¦   ¦   +---java
+¦   ¦       +---main
+¦   ¦           +---me
+¦   ¦               +---ofmgdev
+¦   ¦                   +---MinecraftMobsAddon
+¦   ¦                       ¦   MinecraftMobsAddon.class
+¦   ¦                       ¦   
+¦   ¦                       +---ability
+¦   ¦                       ¦       HelperSpawning$1.class
+¦   ¦                       ¦       HelperSpawning$2.class
+¦   ¦                       ¦       HelperSpawning$SpawnMode.class
+¦   ¦                       ¦       HelperSpawning.class
+¦   ¦                       ¦       RapidArrowAbility$1.class
+¦   ¦                       ¦       RapidArrowAbility.class
+¦   ¦                       ¦       TeleportAbility$1.class
+¦   ¦                       ¦       TeleportAbility.class
+¦   ¦                       ¦       
+¦   ¦                       +---auxiliaryfunctions
+¦   ¦                       ¦       GuardLeash$1.class
+¦   ¦                       ¦       GuardLeash.class
+¦   ¦                       ¦       MountedMob$1.class
+¦   ¦                       ¦       MountedMob.class
+¦   ¦                       ¦       
+¦   ¦                       +---command
+¦   ¦                       ¦       RedDragonIgneelSpawner.class
+¦   ¦                       ¦       SkeletonArcherLordSpawner.class
+¦   ¦                       ¦       ZombieKnightSpawner.class
+¦   ¦                       ¦       
+¦   ¦                       +---effects
+¦   ¦                       ¦       CustomBossBar$1.class
+¦   ¦                       ¦       CustomBossBar$2.class
+¦   ¦                       ¦       CustomBossBar$3.class
+¦   ¦                       ¦       CustomBossBar.class
+¦   ¦                       ¦       CustomParticles$1.class
+¦   ¦                       ¦       CustomParticles$2.class
+¦   ¦                       ¦       CustomParticles$3.class
+¦   ¦                       ¦       CustomParticles$4.class
+¦   ¦                       ¦       CustomParticles.class
+¦   ¦                       ¦       
+¦   ¦                       +---mobs
+¦   ¦                       ¦       RedDragonIgneel$1.class
+¦   ¦                       ¦       RedDragonIgneel.class
+¦   ¦                       ¦       SkeletonArcherLord.class
+¦   ¦                       ¦       ZombieKnight.class
+¦   ¦                       ¦       
+¦   ¦                       +---rootfunctions
+¦   ¦                               CustomArmor$ArmorSet.class
+¦   ¦                               CustomArmor.class
+¦   ¦                               CustomHorse$HorseType.class
+¦   ¦                               CustomHorse.class
+¦   ¦                               CustomMob.class
+¦   ¦                               
+¦   +---generated
+¦   ¦   +---sources
+¦   ¦       +---annotationProcessor
+¦   ¦       ¦   +---java
+¦   ¦       ¦       +---main
+¦   ¦       +---headers
+¦   ¦           +---java
+¦   ¦               +---main
+¦   +---libs
+¦   ¦       MinecraftMobsAddon-1.0.jar
+¦   ¦       
+¦   +---resources
+¦   ¦   +---main
+¦   ¦           plugin.yml
+¦   ¦           
+¦   +---tmp
+¦       +---compileJava
+¦       ¦   ¦   previous-compilation-data.bin
+¦       ¦   ¦   
+¦       ¦   +---compileTransaction
+¦       ¦       +---backup-dir
+¦       ¦       +---stash-dir
+¦       ¦               GuardLeash$1.class.uniqueId2
+¦       ¦               GuardLeash.class.uniqueId7
+¦       ¦               HelperSpawning$1.class.uniqueId4
+¦       ¦               HelperSpawning$2.class.uniqueId0
+¦       ¦               HelperSpawning$SpawnMode.class.uniqueId5
+¦       ¦               HelperSpawning.class.uniqueId6
+¦       ¦               SkeletonArcherLord.class.uniqueId3
+¦       ¦               SkeletonArcherLordSpawner.class.uniqueId1
+¦       ¦               
+¦       +---jar
+¦               MANIFEST.MF
+¦               
++---gradle
+¦   +---wrapper
+¦           gradle-wrapper.jar
+¦           gradle-wrapper.properties
+¦           
++---src
+    +---main
+        +---java
+        ¦   +---me
+        ¦       +---ofmgdev
+        ¦           +---MinecraftMobsAddon
+        ¦               ¦   MinecraftMobsAddon.java
+        ¦               ¦   
+        ¦               +---ability
+        ¦               ¦       HelperSpawning.java
+        ¦               ¦       RapidArrowAbility.java
+        ¦               ¦       TeleportAbility.java
+        ¦               ¦       
+        ¦               +---auxiliaryfunctions
+        ¦               ¦       GuardLeash.java
+        ¦               ¦       MountedMob.java
+        ¦               ¦       
+        ¦               +---command
+        ¦               ¦       RedDragonIgneelSpawner.java
+        ¦               ¦       SkeletonArcherLordSpawner.java
+        ¦               ¦       ZombieKnightSpawner.java
+        ¦               ¦       
+        ¦               +---effects
+        ¦               ¦       CustomBossBar.java
+        ¦               ¦       CustomParticles.java
+        ¦               ¦       
+        ¦               +---mobs
+        ¦               ¦       RedDragonIgneel.java
+        ¦               ¦       SkeletonArcherLord.java
+        ¦               ¦       ZombieKnight.java
+        ¦               ¦       
+        ¦               +---rootfunctions
+        ¦                       CustomArmor.java
+        ¦                       CustomHorse.java
+        ¦                       CustomMob.java
+        ¦                       
+        +---resources
+                plugin.yml
+                

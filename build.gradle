@@ -3,8 +3,8 @@ plugins {
     id("xyz.jpenilla.run-paper") version "2.3.1"
 }
 
-group = 'me.ofir'
-version = '1.0-SNAPSHOT'
+group = 'me.ofmgdev'
+version = '1.0'
 
 repositories {
     mavenCentral()

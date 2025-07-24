@@ -1,8 +1,8 @@
-package me.ofir.ofirMobs.mobs;
+package me.ofmgdev.MinecraftMobsAddon.mobs;
 
-import me.ofir.ofirMobs.rootfunctions.CustomHorse;
-import me.ofir.ofirMobs.rootfunctions.CustomMob;
-import me.ofir.ofirMobs.auxiliaryfunctions.MountedMob;
+import me.ofmgdev.MinecraftMobsAddon.rootfunctions.CustomHorse;
+import me.ofmgdev.MinecraftMobsAddon.rootfunctions.CustomMob;
+import me.ofmgdev.MinecraftMobsAddon.auxiliaryfunctions.MountedMob;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.inventory.ItemStack;
