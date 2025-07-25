@@ -1,12 +1,13 @@
 name: MinecraftMobsAddon
-version: '1.0'
+version: '2.0'
 main: me.ofmgdev.MinecraftMobsAddon.MinecraftMobsAddon
 api-version: '1.21'
 commands:
   spawnzombieknight:
     description: Spawns a zombie knight at the player location
-    usage: /spawnzombieknight
   spawnigneel:
     description: Spawn Igneel Fire Dragon
   spawnskeletonlord:
     description: Spawn Skeleton Archer Lord
+  spawnspiderqueen:
+    description: Spawns Spider Queen

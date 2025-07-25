@@ -51,13 +51,13 @@ public class SkeletonArcherLord {
         // 3 עוזרים רגילים - ציין + חרבות ברזל
         HelperSpawning.startHelperSpawning(plugin, skeleton, 2, 3, 3,
                 EntityType.SKELETON, Material.IRON_SWORD, "Guard Warrior", HelperSpawning.SpawnMode.ALL_AT_ONCE,
-                "chainmail", false, null, 30.0, 0.3);
+                "chainmail", false, null, 30.0, 0.3, 15.0);
 
         // עוזר רכוב על סוס סקלטון - ארמור ברזל + חרב דיאמונד
         CustomHorse skeletonHorse = new CustomHorse(CustomHorse.HorseType.SKELETON, 45.0, 0.4, null);
         HelperSpawning.startHelperSpawning(plugin, skeleton, 10, 1, 1,
                 EntityType.SKELETON, Material.DIAMOND_SWORD, "Elite Mounted Guard", HelperSpawning.SpawnMode.ALL_AT_ONCE,
-                "iron", true, skeletonHorse, 60.0, 0.1);
+                "iron", true, skeletonHorse, 60.0, 0.1, 15.0);
 
         // אפקט אש כחולה לסוס הרכוב
         plugin.getServer().getScheduler().runTaskLater(plugin, () ->

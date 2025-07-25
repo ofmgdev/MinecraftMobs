@@ -30,10 +30,10 @@ public class HelperSpawning {
                                            int intervalSeconds, int helpersPerWave, int maxAliveHelpers,
                                            EntityType helperType, Material weapon, String helperName,
                                            SpawnMode mode, String armorType, boolean mounted,
-                                           CustomHorse horseConfig, double helperHealth, double helperSpeed) {
+                                           CustomHorse horseConfig, double helperHealth, double helperSpeed, double maxDistance){
 
         List<LivingEntity> aliveHelpers = new ArrayList<>();
-        GuardLeash.startLeash(plugin, boss, aliveHelpers, 15.0);
+        GuardLeash.startLeash(plugin, boss, aliveHelpers, maxDistance);
 
         new BukkitRunnable() {
             @Override
@@ -50,6 +50,8 @@ public class HelperSpawning {
 
                 int toSpawn = Math.min(helpersPerWave, canSpawn);
 
+                if (toSpawn <= 0) return;
+
                 if (mode == SpawnMode.ALL_AT_ONCE) {
                     spawnHelpersAtOnce(plugin, boss, toSpawn, helperType, weapon,
                             helperName, aliveHelpers, armorType, mounted, horseConfig, helperHealth, helperSpeed);
@@ -59,6 +61,36 @@ public class HelperSpawning {
                 }
             }
         }.runTaskTimer(plugin, 60, intervalSeconds * 20L);
+        // חלוק target בין כל העוזרים
+        new BukkitRunnable() {
+            @Override
+            public void run() {
+                if (!boss.isValid()) {
+                    cancel();
+                    return;
+                }
+
+                aliveHelpers.removeIf(helper -> !helper.isValid());
+
+                // מצא את הראשון עם target
+                LivingEntity sharedTarget = null;
+                for (LivingEntity helper : aliveHelpers) {
+                    if (helper instanceof org.bukkit.entity.Monster monster && monster.getTarget() != null) {
+                        sharedTarget = monster.getTarget();
+                        break;
+                    }
+                }
+
+                // השתף עם כולם
+                if (sharedTarget != null) {
+                    for (LivingEntity helper : aliveHelpers) {
+                        if (helper instanceof org.bukkit.entity.Monster monster) {
+                            monster.setTarget(sharedTarget);
+                        }
+                    }
+                }
+            }
+        }.runTaskTimer(plugin, 20, 40); // כל 2 שניות
     }
 
     private static void spawnHelpersAtOnce(JavaPlugin plugin, LivingEntity boss, int count,
@@ -88,6 +120,12 @@ public class HelperSpawning {
                 if (!boss.isValid() || spawned >= count) {
                     cancel();
                     return;
+                }
+
+                // נקה מתים ובדוק מגבלה
+                aliveHelpers.removeIf(helper -> helper == null || !helper.isValid() || helper.isDead());
+                if (aliveHelpers.size() >= 6) { // החלף 6 במספר הרצוי
+                    return; // אל תיצור עוד
                 }
 
                 LivingEntity helper = createSingleHelper(plugin, boss, type, weapon, name,
@@ -131,7 +169,9 @@ public class HelperSpawning {
 
         if (helper != null && helper.getEquipment() != null) {
             helper.getEquipment().setItemInMainHand(new ItemStack(weapon));
-            CustomArmor.applyArmorSet(helper, armorType);
+            if (armorType != null) {
+                CustomArmor.applyArmorSet(helper, armorType);
+            }
             helper.customName(Component.text(name, NamedTextColor.GRAY));
             helper.setCustomNameVisible(true);
         }
