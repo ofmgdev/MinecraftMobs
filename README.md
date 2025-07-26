@@ -15,14 +15,17 @@
 ### 🏰 **Epic Boss Encounters**
 | Boss | Type | Special Abilities | Difficulty |
 |------|------|------------------|------------|
+| 🛡️ **Iron Golem Guardian** | Tank Boss | Self-Repair + Ground Slam + Villager Guards | ⭐⭐ |
 | 🧟‍♂️ **Zombie Knight** | Mounted Warrior | Diamond Armor + Horse Combat | ⭐⭐⭐ |
-| 🐲 **Igneel Fire Dragon** | Ender Dragon | Fire Aura + Environmental Fire + Fireballs | ⭐⭐⭐⭐⭐ |
+| 🕷️ **Spider Queen** | Giant Spider | Poison Attacks + Cave Spider Army | ⭐⭐⭐⭐ |
+| 🐺 **Alpha Werewolf** | Pack Leader | Howl Summon + Pack Hunt + Fear Aura | ⭐⭐⭐⭐ |
 | 💀 **Skeleton Archer Lord** | Teleporting Boss | Rapid Arrows + Guard Army + Elite Mounted Units | ⭐⭐⭐⭐ |
+| 🐲 **Igneel Fire Dragon** | Ender Dragon | Fire Aura + Environmental Fire + Fireballs | ⭐⭐⭐⭐⭐ |
 | 🕷️ **Spider Queen** | Giant Spider | Poison Attacks + Cave Spider Army | ⭐⭐⭐⭐ |
 
 ### ⚙️ **Modular Architecture**
-- 🎯 **Ability System** - TeleportAbility, RapidArrowAbility, HelperSpawning, PoisonAttackAbility
-- ✨ **Particle Effects** - Fire, Lightning, Ice auras with environmental impact  
+- 🎯 **Ability System** - TeleportAbility, RapidArrowAbility, HelperSpawning, PoisonAttackAbility, GroundSlamAbility, HowlSummonAbility, PackHuntAbility, SelfRepairAbility
+- ✨ **Particle Effects** - Fire, Lightning, Ice, Fear auras with environmental impact  
 - 👑 **Boss Bars** - Real-time health tracking for all bosses
 - 🏇 **Mounted Combat** - Advanced horse + rider mechanics with AI
 - 🛡️ **Custom Armor Sets** - Leather to Netherite gear system
@@ -30,7 +33,21 @@
 
 ---
 
+<details>
+<summary>🎯 Click to view detailed Boss Stats & Abilities</summary>
+
 ## 🎯 Boss Details
+
+### 🛡️ **Iron Golem Guardian**
+```
+❤️  Health: 200 HP (3x Scale)
+🏃 Speed: 0.15 (Very Slow Tank)
+💥 Ground Slam: 8-block radius every 6s (12 damage)
+🔧 Self Repair: Heals 25 HP when below 50% health
+👥 Guards: Aggressive toward players and villagers
+✨ Aura: Lightning particle effects
+📊 Boss Bar: White
+```
 
 ### 🧟‍♂️ **Zombie Knight**
 ```
@@ -40,27 +57,6 @@
 🛡️  Armor: Full Diamond Set
 🏃 Speed: 0.20 (Rider) + 0.5 (Horse)
 🎯 AI: Advanced mounted combat tracking
-```
-
-### 🐲 **Igneel Fire Dragon** 
-```
-❤️  Health: 250 HP
-🔥 Fire Aura: Burns ground + particle effects
-💥 Attacks: Explosive Fireballs every 3s
-✨ Effects: Lava, smoke, enchant particles
-🎯 AI: Aggressive charge behavior
-📊 Boss Bar: Real-time health tracking
-```
-
-### 💀 **Skeleton Archer Lord**
-```
-❤️  Health: 100 HP (1.35x Scale)
-⚡ Teleport: Every 8 seconds (10 block radius)
-🏹 Rapid Fire: Precise arrows every 0.75s
-👥 Guards: 3x Chain Armor Warriors with Iron Swords
-🏇 Elite Unit: 1x Mounted Skeleton (Iron Armor + Diamond Sword)
-🛡️ Guard Leash: Auto-teleport guards within 15 blocks
-💙 Effects: Blue fire trail for mounted units
 ```
 
 ### 🕷️ **Spider Queen** 
@@ -74,23 +70,104 @@
 ✨ Aura: Green particle effects
 ```
 
+### 🐺 **Alpha Werewolf**
+```
+❤️  Health: 120 HP (4x Scale)
+🌙 Howl Summon: 2 pack wolves every 8s (max 6 total)
+🩸 Pack Hunt: Damage and speed increase with pack size
+😱 Fear Aura: Causes slowness, blindness, and nausea
+⚔️  Attack: 10 base damage (scales with pack)
+🏃 Speed: 0.4 base (increases with pack size)
+✨ Effects: Red flame and fear particles
+```
+
+### 💀 **Skeleton Archer Lord**
+```
+❤️  Health: 100 HP (1.35x Scale)
+⚡ Teleport: Every 8 seconds (10 block radius)
+🏹 Rapid Fire: Precise arrows every 0.75s
+👥 Guards: 3x Chain Armor Warriors with Iron Swords
+🏇 Elite Unit: 1x Mounted Skeleton (Iron Armor + Diamond Sword)
+🛡️ Guard Leash: Auto-teleport guards within 15 blocks
+💙 Effects: Blue fire trail for mounted units
+```
+
+### 🐲 **Igneel Fire Dragon** 
+```
+❤️  Health: 250 HP
+🔥 Fire Aura: Burns ground + particle effects
+💥 Attacks: Explosive Fireballs every 3s
+✨ Effects: Lava, smoke, enchant particles
+🎯 AI: Aggressive charge behavior
+📊 Boss Bar: Real-time health tracking
+```
+
+</details>
+
 ---
 
 ## 🎮 Commands
 
 | Command | Description | Permission |
 |---------|-------------|------------|
+| `/spawnironguardian` | 🛡️ Spawn Iron Golem Guardian | `minecraftmobs.spawn.ironguardian` |
 | `/spawnzombieknight` | 🧟‍♂️ Spawn Zombie Knight | `minecraftmobs.spawn.zombie` |
-| `/spawnigneel` | 🐲 Spawn Igneel Fire Dragon | `minecraftmobs.spawn.dragon` |
-| `/spawnskeletonlord` | 💀 Spawn Skeleton Archer Lord | `minecraftmobs.spawn.skeleton` |
 | `/spawnspiderqueen` | 🕷️ Spawn Spider Queen | `minecraftmobs.spawn.spider` |
+| `/spawnwerewolfwarrior` | 🐺 Spawn Alpha Werewolf | `minecraftmobs.spawn.werewolf` |
+| `/spawnskeletonlord` | 💀 Spawn Skeleton Archer Lord | `minecraftmobs.spawn.skeleton` |
+| `/spawnigneel` | 🐲 Spawn Igneel Fire Dragon | `minecraftmobs.spawn.dragon` |
 
 ---
 
+## 🏰 Future Vision
+
+### 🎯 **Long-term Goal: Village Defense Game**
+This plugin is designed as **Phase 1** of a planned **Tower Defense + Village Building** project.
+
+**The Vision:**
+- 🌙 **Night Rounds** - Waves of monsters attack villages
+- 🏰 **Village Building** - Construct defenses  
+- 💰 **Economy System** - Resources and upgrades
+- 📊 **Player Progression** - Levels and skills
+- 👥 **Cooperative Play** - Team-based challenges
+
+**Current Status:** Boss & Monster system complete ✅  
+**Next Phase:** Game mechanics and village systems 🔄
+
+---
+
+<details>
+<summary>📋 Click to view Version History & Changelog</summary>
+
 ## 📋 Version History
 
-### 🚀 **Version 2.0** - *Spider Queen Update*
+### 🚀 **Version 3.0** - *Guardian & Alpha Update*
 **Release Date:** *Current Development*
+
+#### ✨ **NEW FEATURES**
+- 🛡️ **Iron Golem Guardian** - Tank boss with self-repair and ground slam
+- 🐺 **Alpha Werewolf** - Pack leader with howl summon and fear aura
+- 💥 **Ground Slam System** - Area damage ability with knockback
+- 🌙 **Pack Hunt Mechanics** - Dynamic stat scaling based on pack size
+- 😱 **Fear Aura Effects** - Debuff system with blindness and nausea
+
+#### 🔧 **IMPROVEMENTS**
+- 🔧 **Self-Repair Ability** - Automatic healing when health drops below threshold
+- 🐺 **Pack AI System** - Coordinated wolf pack behavior
+- ⚡ **Enhanced Particle Effects** - Fear aura with multiple debuff effects
+- 🛠️ **Deploy Script** - Automated build and deployment system
+
+#### 📁 **NEW FILES ADDED**
+- `IronGolemGuardian.java` + `IronGolemGuardianSpawner.java`
+- `WerewolfWarrior.java` + `WerewolfWarriorSpawner.java`
+- `GroundSlamAbility.java`, `SelfRepairAbility.java`
+- `HowlSummonAbility.java`, `PackHuntAbility.java`
+- Enhanced `CustomParticles.java` with `startFearAura()`
+
+---
+
+### 🕷️ **Version 2.0** - *Spider Queen Update*
+**Release Date:** *Previous*
 
 #### ✨ **NEW FEATURES**
 - 🕷️ **Spider Queen Boss** - Giant spider with poison abilities
@@ -101,23 +178,15 @@
 - 🎯 **Smart Target Sharing** - All helpers now attack the same target
 - 📏 **Flexible Guard Distance** - Customizable leash distance per boss type
 - 🛡️ **Armor System Fix** - Null pointer protection for entities without armor support
-- ⚡ **Enhanced Helper Spawning** - Improved modes and spawn timing
-
-#### 🐛 **BUG FIXES**
-- Fixed crash when spawning entities that don't support armor
-- Fixed helpers attacking each other
-- Fixed static 15-block distance for all bosses
-- Improved mounted unit teleportation with horse preservation
 
 #### 📁 **NEW FILES ADDED**
-- `SpiderQueen.java` - Main spider boss implementation
-- `SpiderQueenSpawner.java` - Command handler
-- `PoisonAttackAbility.java` - Reusable poison attack system
+- `SpiderQueen.java` + `SpiderQueenSpawner.java`
+- `PoisonAttackAbility.java`
 
 ---
 
 ### 🎉 **Version 1.0** - *Foundation Release*
-**Release Date:** *Initial Development*
+**Release Date:** *Initial*
 
 #### ✨ **CORE FEATURES**
 - 🧟‍♂️ **Zombie Knight** - Mounted warrior with diamond gear
@@ -129,19 +198,8 @@
 - ✨ **Particle Effects** - Fire, Lightning, Ice auras
 - 👑 **Boss Bar System** - Real-time health tracking
 - 🏇 **Mounted Mob System** - Horse + rider mechanics
-- 🛡️ **Custom Armor Sets** - Equipment management
-- 🤖 **Guard Leash** - Minion distance control
 
-#### 📁 **PACKAGE STRUCTURE**
-```
-me.ofmgdev.MinecraftMobsAddon/
-├── ability/           - Boss abilities
-├── auxiliaryfunctions/ - Helper systems
-├── command/           - Spawn commands  
-├── effects/           - Particles & boss bars
-├── mobs/              - Boss implementations
-└── rootfunctions/     - Core mechanics
-```
+</details>
 
 ---
 
