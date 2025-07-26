@@ -21,7 +21,6 @@
 | 🐺 **Alpha Werewolf** | Pack Leader | Howl Summon + Pack Hunt + Fear Aura | ⭐⭐⭐⭐ |
 | 💀 **Skeleton Archer Lord** | Teleporting Boss | Rapid Arrows + Guard Army + Elite Mounted Units | ⭐⭐⭐⭐ |
 | 🐲 **Igneel Fire Dragon** | Ender Dragon | Fire Aura + Environmental Fire + Fireballs | ⭐⭐⭐⭐⭐ |
-| 🕷️ **Spider Queen** | Giant Spider | Poison Attacks + Cave Spider Army | ⭐⭐⭐⭐ |
 
 ### ⚙️ **Modular Architecture**
 - 🎯 **Ability System** - TeleportAbility, RapidArrowAbility, HelperSpawning, PoisonAttackAbility, GroundSlamAbility, HowlSummonAbility, PackHuntAbility, SelfRepairAbility
