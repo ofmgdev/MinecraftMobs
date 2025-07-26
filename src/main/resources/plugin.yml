@@ -1,5 +1,5 @@
 name: MinecraftMobsAddon
-version: '2.0'
+version: '3.0'
 main: me.ofmgdev.MinecraftMobsAddon.MinecraftMobsAddon
 api-version: '1.21'
 commands:
@@ -11,3 +11,7 @@ commands:
     description: Spawn Skeleton Archer Lord
   spawnspiderqueen:
     description: Spawns Spider Queen
+  spawnironguardian:
+    description: Spawns Iron Guardian
+  spawnwerewolfwarrior:
+    description: Spawns Alpha Werewolf

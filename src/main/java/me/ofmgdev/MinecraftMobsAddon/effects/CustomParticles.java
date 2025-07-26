@@ -104,4 +104,46 @@ public class CustomParticles {
             }
         }.runTaskTimer(plugin, 0, 5);
     }
+
+    public static void startFearAura(JavaPlugin plugin, LivingEntity entity) {
+        new BukkitRunnable() {
+            @Override
+            public void run() {
+                if (!entity.isValid()) {
+                    cancel();
+                    return;
+                }
+                Location loc = entity.getLocation();
+
+                // אפקטי פחד אדומים חזקים - יותר בולטים
+                loc.getWorld().spawnParticle(Particle.FLAME, loc.add(0, 2, 0), 50, 5, 3, 5, 0.1);
+                loc.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc, 60, 6, 4, 6, 0.05);
+                loc.getWorld().spawnParticle(Particle.ANGRY_VILLAGER, loc, 30, 4, 2, 4, 0);
+                loc.getWorld().spawnParticle(Particle.LARGE_SMOKE, loc, 40, 4, 2, 4, 0.02);
+                loc.getWorld().spawnParticle(Particle.SOUL_FIRE_FLAME, loc, 25, 3, 1, 3, 0.03);
+
+                // אפקטי פחד מקבעים לשחקנים קרובים
+                for (org.bukkit.entity.Player player : loc.getWorld().getPlayers()) {
+                    double distance = player.getLocation().distance(loc);
+                    if (distance <= 12.0) {
+                        // איטיות חזקה
+                        player.addPotionEffect(new org.bukkit.potion.PotionEffect(
+                                org.bukkit.potion.PotionEffectType.SLOWNESS, 60, 2)); // 3 שניות איטיות חזקה
+
+                        // עיוורון קצר במרחק קרוב
+                        if (distance <= 6.0) {
+                            player.addPotionEffect(new org.bukkit.potion.PotionEffect(
+                                    org.bukkit.potion.PotionEffectType.BLINDNESS, 20, 0)); // שנייה עיוורון
+                        }
+
+                        // בחילה קלה לאפקט נוסף
+                        if (distance <= 8.0) {
+                            player.addPotionEffect(new org.bukkit.potion.PotionEffect(
+                                    org.bukkit.potion.PotionEffectType.NAUSEA, 40, 0)); // 2 שניות בחילה
+                        }
+                    }
+                }
+            }
+        }.runTaskTimer(plugin, 0, 10); // כל חצי שנייה - יותר מהיר
+    }
 }

@@ -1,9 +1,6 @@
 package me.ofmgdev.MinecraftMobsAddon;
 
-import me.ofmgdev.MinecraftMobsAddon.command.RedDragonIgneelSpawner;
-import me.ofmgdev.MinecraftMobsAddon.command.SkeletonArcherLordSpawner;
-import me.ofmgdev.MinecraftMobsAddon.command.SpiderQueenSpawner;
-import me.ofmgdev.MinecraftMobsAddon.command.ZombieKnightSpawner;
+import me.ofmgdev.MinecraftMobsAddon.command.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
@@ -21,6 +18,8 @@ public final class MinecraftMobsAddon extends JavaPlugin {
         Objects.requireNonNull(this.getCommand("spawnigneel")).setExecutor(new RedDragonIgneelSpawner(this));
         Objects.requireNonNull(this.getCommand("spawnskeletonlord")).setExecutor(new SkeletonArcherLordSpawner(this));
         Objects.requireNonNull(this.getCommand("spawnspiderqueen")).setExecutor(new SpiderQueenSpawner(this));
+        Objects.requireNonNull(this.getCommand("spawnironguardian")).setExecutor(new IronGolemGuardianSpawner(this));
+        Objects.requireNonNull(this.getCommand("spawnwerewolfwarrior")).setExecutor(new WerewolfWarriorSpawner(this));
     }
 
     public static MinecraftMobsAddon getInstance() {
