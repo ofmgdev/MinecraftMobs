@@ -23,7 +23,6 @@
 | 🐲 **Igneel Fire Dragon** | Ender Dragon | Fire Aura + Environmental Fire + Fireballs | ⭐⭐⭐⭐⭐ |
 | 🔥 **Blazing Pyromancer** | Fire Mage | Meteor Rain + Fire Tornado + Flame Walls | ⭐⭐⭐⭐⭐ |
 | 💀 **The Ancient Destroyer** | **FINAL BOSS** | **INDESTRUCTIBLE** - Death Beam + Soul Drain + Necromancy | ⭐⭐⭐⭐⭐⭐⭐ |
-| 🕷️ **Spider Queen** | Giant Spider | Poison Attacks + Cave Spider Army | ⭐⭐⭐⭐ |
 
 ### ⚙️ **Modular Architecture**
 - 🎯 **Ability System** - TeleportAbility, RapidArrowAbility, HelperSpawning, PoisonAttackAbility, GroundSlamAbility, HowlSummonAbility, PackHuntAbility, SelfRepairAbility, MeteorRainAbility, FireTornadoAbility, DeathBeamAbility, NecromancyWaveAbility, SoulDrainAbility, FinalRageAbility
