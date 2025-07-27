@@ -20,6 +20,8 @@ public final class MinecraftMobsAddon extends JavaPlugin {
         Objects.requireNonNull(this.getCommand("spawnspiderqueen")).setExecutor(new SpiderQueenSpawner(this));
         Objects.requireNonNull(this.getCommand("spawnironguardian")).setExecutor(new IronGolemGuardianSpawner(this));
         Objects.requireNonNull(this.getCommand("spawnwerewolfwarrior")).setExecutor(new WerewolfWarriorSpawner(this));
+        Objects.requireNonNull(this.getCommand("spawnblazingpyromancer")).setExecutor(new BlazingPyromancerSpawner(this));
+        Objects.requireNonNull(this.getCommand("spawnancientdestroyer")).setExecutor(new TheAncientDestroyerSpawner(this));
     }
 
     public static MinecraftMobsAddon getInstance() {

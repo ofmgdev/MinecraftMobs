@@ -26,6 +26,7 @@ public class CustomParticles {
                 // אפקטים מגניבים נוספים
                 loc.getWorld().spawnParticle(Particle.ENCHANT, loc, 20, 5, 5, 5, 1);
                 loc.getWorld().spawnParticle(Particle.CRIMSON_SPORE, loc, 15, 4, 4, 4, 0);
+
                 // מדליק בלוקים סביבו
                 if (Math.random() < 0.1) { // 10% סיכוי כל 3 טיקים
                     for (int x = -2; x <= 2; x++) {
@@ -35,6 +36,23 @@ public class CustomParticles {
                                     blockLoc.clone().add(0, 1, 0).getBlock().getType() == org.bukkit.Material.AIR) {
                                 blockLoc.clone().add(0, 1, 0).getBlock().setType(org.bukkit.Material.FIRE);
                             }
+                        }
+                    }
+                }
+
+                // Heat Wave - נזק רציף לשחקנים קרובים (נפרד!)
+                if (Math.random() < 0.15) { // 15% סיכוי כל 3 טיקים
+                    for (org.bukkit.entity.Player player : loc.getWorld().getPlayers()) {
+                        double distance = player.getLocation().distance(loc);
+                        if (distance <= 8.0) {
+                            // נזק מדורג לפי מרחק
+                            double damage = distance <= 4.0 ? 3.0 : 1.5;
+                            player.damage(damage);
+                            player.setFireTicks(40); // 2 שניות אש
+
+                            // איטיות מחום
+                            player.addPotionEffect(new org.bukkit.potion.PotionEffect(
+                                    org.bukkit.potion.PotionEffectType.SLOWNESS, 60, 0)); // 3 שניות איטיות
                         }
                     }
                 }
