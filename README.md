@@ -4,7 +4,7 @@
 ![Spigot](https://img.shields.io/badge/Spigot-Paper-orange?style=for-the-badge)
 ![Java](https://img.shields.io/badge/Java-17+-red?style=for-the-badge&logo=java)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-2.0-purple?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-4.0-purple?style=for-the-badge)
 
 > 🎮 **Advanced Modular Boss System** with custom abilities, particle effects, and AI!
 
@@ -21,9 +21,12 @@
 | 🐺 **Alpha Werewolf** | Pack Leader | Howl Summon + Pack Hunt + Fear Aura | ⭐⭐⭐⭐ |
 | 💀 **Skeleton Archer Lord** | Teleporting Boss | Rapid Arrows + Guard Army + Elite Mounted Units | ⭐⭐⭐⭐ |
 | 🐲 **Igneel Fire Dragon** | Ender Dragon | Fire Aura + Environmental Fire + Fireballs | ⭐⭐⭐⭐⭐ |
+| 🔥 **Blazing Pyromancer** | Fire Mage | Meteor Rain + Fire Tornado + Flame Walls | ⭐⭐⭐⭐⭐ |
+| 💀 **The Ancient Destroyer** | **FINAL BOSS** | **INDESTRUCTIBLE** - Death Beam + Soul Drain + Necromancy | ⭐⭐⭐⭐⭐⭐⭐ |
+| 🕷️ **Spider Queen** | Giant Spider | Poison Attacks + Cave Spider Army | ⭐⭐⭐⭐ |
 
 ### ⚙️ **Modular Architecture**
-- 🎯 **Ability System** - TeleportAbility, RapidArrowAbility, HelperSpawning, PoisonAttackAbility, GroundSlamAbility, HowlSummonAbility, PackHuntAbility, SelfRepairAbility
+- 🎯 **Ability System** - TeleportAbility, RapidArrowAbility, HelperSpawning, PoisonAttackAbility, GroundSlamAbility, HowlSummonAbility, PackHuntAbility, SelfRepairAbility, MeteorRainAbility, FireTornadoAbility, DeathBeamAbility, NecromancyWaveAbility, SoulDrainAbility, FinalRageAbility
 - ✨ **Particle Effects** - Fire, Lightning, Ice, Fear auras with environmental impact  
 - 👑 **Boss Bars** - Real-time health tracking for all bosses
 - 🏇 **Mounted Combat** - Advanced horse + rider mechanics with AI
@@ -101,6 +104,30 @@
 📊 Boss Bar: Real-time health tracking
 ```
 
+### 🔥 **Blazing Pyromancer**
+```
+❤️  Health: 180 HP (2.5x Scale)
+🌋 Meteor Rain: 5 meteors every 12s (15 HP damage each)
+🌪️ Fire Tornado: 6-block radius spinning fire vortex (8s duration)
+🔥 Flame Wall: Protective fire circle when below 50% health
+✨ Effects: Orange-red fire and heavy smoke particles
+🎯 AI: Floating blaze with area control abilities
+📊 Boss Bar: Yellow with fire effects
+```
+
+### 💀 **The Ancient Destroyer**
+```
+❤️  Health: 500 HP (6x Scale) + 80% damage reduction
+⚡ Regeneration: +10 HP every 5 seconds (unstoppable healing)
+💀 Necromancy Wave: Raises 6 armed undead every 18s
+⚡ Soul Drain: Steals health from all nearby players
+☠️  Death Beam: Precision laser with 3s warning (35 damage)
+😱 Final Rage: Activates at 20% health - doubles speed/damage
+🎯 AI: Wither Skeleton with apocalyptic abilities
+📊 Boss Bar: Purple with "INDESTRUCTIBLE" warning
+⚠️  WARNING: Requires coordinated team and infrastructure to defeat!
+```
+
 </details>
 
 ---
@@ -115,6 +142,8 @@
 | `/spawnwerewolfwarrior` | 🐺 Spawn Alpha Werewolf | `minecraftmobs.spawn.werewolf` |
 | `/spawnskeletonlord` | 💀 Spawn Skeleton Archer Lord | `minecraftmobs.spawn.skeleton` |
 | `/spawnigneel` | 🐲 Spawn Igneel Fire Dragon | `minecraftmobs.spawn.dragon` |
+| `/spawnblazingpyromancer` | 🔥 Spawn Blazing Pyromancer | `minecraftmobs.spawn.pyromancer` |
+| `/spawnancientdestroyer` | 💀 Spawn The Ancient Destroyer | `minecraftmobs.spawn.destroyer` |
 
 ---
 
@@ -130,7 +159,7 @@ This plugin is designed as **Phase 1** of a planned **Tower Defense + Village Bu
 - 📊 **Player Progression** - Levels and skills
 - 👥 **Cooperative Play** - Team-based challenges
 
-**Current Status:** Boss & Monster system complete ✅  
+**Current Status:** Complete Boss & Monster system with 8 bosses (⭐⭐ to ⭐⭐⭐⭐⭐⭐⭐) ✅  
 **Next Phase:** Game mechanics and village systems 🔄
 
 ---
@@ -140,8 +169,36 @@ This plugin is designed as **Phase 1** of a planned **Tower Defense + Village Bu
 
 ## 📋 Version History
 
+### 🔥 **Version 4.0** - *Final Boss & Pyromancer Update*
+**Release Date:** *Current Release*
+
+#### ✨ **NEW FEATURES**
+- 🔥 **Blazing Pyromancer** - Fire mage with meteor rain and tornado abilities (⭐⭐⭐⭐⭐)
+- 💀 **The Ancient Destroyer** - INDESTRUCTIBLE final boss requiring team coordination (⭐⭐⭐⭐⭐⭐⭐)
+- 🌋 **Meteor Rain System** - Devastating meteor strikes with lava pool creation
+- 🌪️ **Fire Tornado Mechanics** - Spinning fire vortex with pull and burn effects
+- ☠️ **Death Beam Ability** - Precision laser attack with 3-second warning system
+- 🧟 **Necromancy Wave** - Raises 6 armed undead (skeletons/zombies) from ground
+- ⚡ **Soul Drain System** - Life-stealing ability that heals boss from player damage
+- 😱 **Final Rage Mechanics** - Modular rage system with stat multipliers
+
+#### 🔧 **IMPROVEMENTS**
+- 🔥 **Enhanced Fire Aura** - Now deals proximity-based damage (Heat Wave system)
+- 🛡️ **Advanced Warning Systems** - Visual/audio alerts for devastating attacks
+- 🌍 **Environmental Destruction** - Meteors create permanent lava pools
+- 🎯 **Multi-Phase Combat** - Warning periods and escalating attack intensity
+
+#### 📁 **NEW FILES ADDED**
+- `BlazingPyromancer.java` + `BlazingPyromancerSpawner.java`
+- `TheAncientDestroyer.java` + `TheAncientDestroyerSpawner.java`
+- `MeteorRainAbility.java`, `FireTornadoAbility.java`
+- `DeathBeamAbility.java`, `NecromancyWaveAbility.java`
+- `SoulDrainAbility.java`, `FinalRageAbility.java`
+
+---
+
 ### 🚀 **Version 3.0** - *Guardian & Alpha Update*
-**Release Date:** *Current Development*
+**Release Date:** *Previous*
 
 #### ✨ **NEW FEATURES**
 - 🛡️ **Iron Golem Guardian** - Tank boss with self-repair and ground slam
@@ -207,12 +264,18 @@ This plugin is designed as **Phase 1** of a planned **Tower Defense + Village Bu
 ### 📁 **Current Package Structure**
 ```
 me.ofmgdev.MinecraftMobsAddon/
-├── ability/           - TeleportAbility, RapidArrowAbility, HelperSpawning, PoisonAttackAbility
+├── ability/ - TeleportAbility, RapidArrowAbility, HelperSpawning, PoisonAttackAbility,
+│              GroundSlamAbility, HowlSummonAbility, PackHuntAbility, SelfRepairAbility,
+│              MeteorRainAbility, FireTornadoAbility, DeathBeamAbility, 
+│              NecromancyWaveAbility, SoulDrainAbility, FinalRageAbility
 ├── auxiliaryfunctions/ - MountedMob, GuardLeash
-├── command/           - ZombieKnightSpawner, RedDragonIgneelSpawner, SkeletonArcherLordSpawner, SpiderQueenSpawner
-├── effects/           - CustomParticles, CustomBossBar
-├── mobs/              - ZombieKnight, RedDragonIgneel, SkeletonArcherLord, SpiderQueen
-└── rootfunctions/     - CustomMob, CustomArmor, CustomHorse
+├── command/ - ZombieKnightSpawner, RedDragonIgneelSpawner, SkeletonArcherLordSpawner,
+│              SpiderQueenSpawner, IronGolemGuardianSpawner, WerewolfWarriorSpawner,
+│              BlazingPyromancerSpawner, TheAncientDestroyerSpawner
+├── effects/ - CustomParticles (Fire, Ice, Lightning, Fear), CustomBossBar
+├── mobs/ - ZombieKnight, RedDragonIgneel, SkeletonArcherLord, SpiderQueen,
+│           IronGolemGuardian, WerewolfWarrior, BlazingPyromancer, TheAncientDestroyer
+└── rootfunctions/ - CustomMob, CustomArmor, CustomHorse
 ```
 
 ### ⚙️ **Core Systems**
