@@ -311,12 +311,6 @@ JAR file will be in `build/libs/MinecraftMobs.jar`
 
 ---
 
-## 📸 Screenshots
-
-> 🖼️ *Screenshots coming soon!*
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to:
@@ -331,7 +325,6 @@ Contributions are welcome! Feel free to:
 
 Need help? Found a bug?
 - 📧 Create an [Issue](../../issues)
-- 💬 Contact: [Your Discord/Email]
 
 ---
 
